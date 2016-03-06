@@ -1,0 +1,20 @@
+/*
+ * ParkLampsController.h
+ *  Created on: Mar 5, 2016
+ *      Author: Equipo 9
+ */
+
+#ifndef PARKLAMPSCONTROLLER_H_
+	#define PARKLAMPSCONTROLLER_H_
+
+
+/* Includes */
+/*============================================================================*/
+
+
+/* Constants and types */
+/*============================================================================*/
+
+
+#endif /* PARKLAMPSCONTROLLER_H_ */
+/* Notice: the file ends with a blank new line to avoid compiler warnings */

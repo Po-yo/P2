@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;P2/Sources/ParkLampController.c&apos; to &apos;LogicUnit.c&apos;" description="Rename resource &apos;ParkLampController.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Sources/ParkLampController.c" name="LogicUnit.c" stamp="1457222494043" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;P2/Sources/ParkLampController.h&apos; to &apos;LogicUnit.h&apos;" description="Rename resource &apos;ParkLampController.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Sources/ParkLampController.h" name="LogicUnit.h" stamp="1457222554862" updateReferences="true"/>
+</session>

@@ -1,0 +1,30 @@
+/*
+ * Practica2.h
+ *  Created on: Mar 5, 2016
+ *      Author: Equipo 9
+ */
+
+#ifndef PRACTICA2_H_
+	#define PRACTICA2_H_
+
+	#ifndef FALSE
+	  #define  FALSE  0x00u                /* Boolean value FALSE. FALSE is defined always as a zero value. */
+	#endif
+
+	#ifndef TRUE
+	  #define  TRUE   0x01u                /* Boolean value TRUE. TRUE is defined always as a non zero value. */
+	#endif
+
+
+/* Includes */
+/*============================================================================*/
+
+
+/* Constants and types */
+/*============================================================================*/
+typedef unsigned char T_UBYTE ;
+typedef unsigned int T_UWORD ;
+
+
+#endif /* PRACTICA2_H_ */
+/* Notice: the file ends with a blank new line to avoid compiler warnings */

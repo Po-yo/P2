@@ -1,0 +1,20 @@
+/*
+ * LightSensor.h
+ *  Created on: Mar 5, 2016
+ *      Author: Equipo 9
+ */
+
+#ifndef LIGHTSENSOR_H_
+	#define LIGHTSENSOR_H_
+
+
+/* Includes */
+/*============================================================================*/
+
+
+/* Constants and types */
+/*============================================================================*/
+
+
+#endif /* LIGHTSENSOR_H_ */
+/* Notice: the file ends with a blank new line to avoid compiler warnings */
