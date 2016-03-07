@@ -14,7 +14,7 @@
 
 /* Variables */
 /*============================================================================*/
-E_LAMP e_lamp_currentState;
+
 
 /* Exported functions prototypes */
 /*============================================================================*/
@@ -22,9 +22,6 @@ E_LAMP e_lamp_currentState;
 
 /* Private functions prototypes */
 /*============================================================================*/
-static void p_init_Lamps(void);
-static void p_set_Lamps(E_LAMP state);
-static E_LAMP p_get_Lamps();
 
 
 /* Private functions */
@@ -54,50 +51,20 @@ static void p_init_Lamps(void)
 	GPIOD_PSOR = S_RGB.LED_BLUE;/* Set the initial output state to high */
 	GPIOD_PDDR |= S_RGB.LED_BLUE;/* Set the pins direction to output */
 	
-	//GPIOB_PSOR |= (S_RGB.COLOR); OFF
-	//GPIOB_PCOR |= (S_RGB.COLOR); ON
-	//GPIOB_PTOR |= (S_RGB.COLOR); TOGGLE
-	p_set_Lamps(LIGHTS_OFF);
-	e_lamp_currentState = LIGHTS_OFF;
+	//GPIOB_PSOR |= (1<< S_RGB.COLOR); OFF
+	//GPIOB_PCOR |= (1<< S_RGB.COLOR); ON
+	//GPIOB_PTOR |= (1<< S_RGB.COLOR); TOGGLE
 }
 
 /**************************************************************
  *  Name                 : p_init_Lamps
- *  Description          : Sets current state of lamps
+ *  Description          : Sets ports for Leds simulating lamp states
  *  Parameters           : E_LAMP
  *  Return               : void
  *  Critical/explanation : [No]
  **************************************************************/
 static void p_set_Lamps(E_LAMP state)
 {
-	switch (state) {
-		case LIGHTS_OFF:
-		default:
-			GPIOB_PSOR = (S_LAMP_GPIOB_PSOR.LIGHTS_OFF);
-			GPIOB_PCOR = (S_LAMP_GPIOB_PCOR.LIGHTS_OFF);
-		break;
-		case LIGHTS_HALF:
-			GPIOB_PSOR = (S_LAMP_GPIOB_PSOR.LIGHTS_HALF);
-			GPIOB_PCOR = (S_LAMP_GPIOB_PCOR.LIGHTS_HALF);
-		break;
-		case LIGHTS_ON:
-			GPIOB_PSOR = (S_LAMP_GPIOB_PSOR.LIGHTS_ON);
-			GPIOB_PCOR = (S_LAMP_GPIOB_PCOR.LIGHTS_ON);
-		break;
-	}
-	e_lamp_currentState = state;
-}
-
-/**************************************************************
- *  Name                 : p_get_Lamps
- *  Description          : Returns current state of lamps
- *  Parameters           : void
- *  Return               : E_LAMP
- *  Critical/explanation : [No]
- **************************************************************/
-static E_LAMP p_get_Lamps(void)
-{
-	return e_lamp_currentState;
 }
 
 
