@@ -1,0 +1,22 @@
+/*
+ * main implementation: use this 'C' sample to create your own application
+ *
+ */
+
+
+
+
+
+#include "derivative.h" /* include peripheral declarations */
+#include "LogicUnit.h"
+
+
+int main(void)
+{
+	init
+	
+	for(;;) {
+	}
+	
+	return 0;
+}

@@ -8,18 +8,15 @@
 
 
 #include "derivative.h" /* include peripheral declarations */
-
+#include "LogicUnit.h"
 
 
 int main(void)
 {
-	int counter = 0;
+	p_initLogicUnit();
 	
-	
-	
-	
-	for(;;) {	   
-	   	counter++;
+	for(;;) {
+		p_update();
 	}
 	
 	return 0;

@@ -1,0 +1,50 @@
+/*
+ * LogicUnit.c
+ *  Created on: Mar 5, 2016
+ *      Author: Equipo 9
+ */
+
+/* Includes */
+/*============================================================================*/
+#include "LampController.h"
+#include "LightSensor.h"
+#include "SelectorSensor.h"
+
+
+/* Constants and types  */
+/*============================================================================*/
+
+
+/* Variables */
+/*============================================================================*/
+
+
+/* Exported functions prototypes */
+/*============================================================================*/
+
+
+/* Private functions prototypes */
+/*============================================================================*/
+
+
+/* Private functions */
+/*============================================================================*/
+
+/**************************************************************
+ *  Name                 : p_update
+ *  Description          : Gets readings from sensors and sets corresponding value for lamps
+ *  Parameters           : void
+ *  Return               : void
+ *  Critical/explanation : [No]
+ **************************************************************/
+static void p_update(void)
+{
+	p_get
+}
+
+
+/* Exported functions */
+/*============================================================================*/
+
+
+/* Notice: the file ends with a blank new line to avoid compiler warnings */

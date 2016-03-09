@@ -1,0 +1,5 @@
+
+**** Build of configuration FLASH for project P2 ****
+
+"C:\\Freescale\\CW MCU v10.6.4\\gnu\\bin\\mingw32-make" -j6 all 
+mingw32-make: Nothing to be done for `all'.

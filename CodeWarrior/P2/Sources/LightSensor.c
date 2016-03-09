@@ -6,6 +6,8 @@
 
 /* Includes */
 /*============================================================================*/
+#include "LightSensor.h"
+#include "Practica2.h"
 
 
 /* Constants and types  */
@@ -22,32 +24,48 @@
 
 /* Private functions prototypes */
 /*============================================================================*/
+void p_init_LightSensor(void);
+T_UWORD p_get_LightSensor_Value(void);
 
 
 /* Private functions */
 /*============================================================================*/
 
 /**************************************************************
- *  Name                 : p_random_Filtered
- *  Description          : Sets rs_aux2.ruw_AP0_1 with the next 'random' value from rpub_SEC_1
+ *  Name                 : p_init_LightSensor
+ *  Description          : Initializes clock and configures pin 0
  *  Parameters           : void
  *  Return               : void
  *  Critical/explanation : [No]
  **************************************************************/
-//static void p_random_Filtered(void);
+void p_init_LightSensor(void)
+{
+	//Enable the clock for the desired port 
+	SIM_SCGC5 |= SIM_SCGC5_PORTC_MASK;
+	 
+	// Configure the pins as GPIO, using the mux macro:
+	PORTC_PCR0 = PORT_PCR_MUX(1);    //Pin function alternative '1' is GPIO
+	
+	//Configure pin 0 as input
+	GPIOC_PDDR &= ~PIN0;
+}
+
+/**************************************************************
+ *  Name                 : p_get_LightSensor_Value
+ *  Description          : Returns value from light sensor
+ *  Parameters           : void
+ *  Return               : T_UWORD
+ *  Critical/explanation : [No]
+ **************************************************************/
+T_UWORD p_get_LightSensor_Value(void)
+{
+	//Return reading from pin 0
+	return GPIOC_PDIR & PIN0;
+}
 
 
 /* Exported functions */
 /*============================================================================*/
-
-/**************************************************************
- *  Name                 : p_Get_LEDRangeValid
- *  Description          : Return the current colour
- *  Parameters           : void
- *  Return               : E_LED (Return the current colour)
- *  Critical/explanation : [No]
- **************************************************************/
-//E_LED p_Get_LEDRangeValid(void);
 
 
 /* Notice: the file ends with a blank new line to avoid compiler warnings */
